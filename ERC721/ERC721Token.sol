@@ -1917,7 +1917,7 @@ contract ERC721Token is ERC721, Ownable {
     /**
     * Mint
     */
-    function mint(uint tokenId) public{
+    function mint(uint tokenId) public onlyOwner{
         _safeMint(msg.sender, tokenId);
     }
 
